@@ -1,11 +1,12 @@
 <?php
 
 $server = "localhost";
-$server = "root";
-$password = "123456789"; //es el password del CHAMP
+$user = "root";
+$password = ""; //es el password del CHAMP
+$baseDatos = "cetis";
 
 //conexion
-$conexion = new mysqli($server, $user, $password);
+$conexion = new mysqli($server, $user, $password, $baseDatos);
 
 //revisar conexion
 if($conexion->connect_error){
