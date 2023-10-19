@@ -3,10 +3,11 @@
 $server = "localhost";
 $user = "root";
 $password = ""; //es el password del CHAMP
-$baseDatos = "cetis";
+$baseDatos = "cetis107";
 
 //conexion
-$conexion = new mysqli($server, $user, $password, $baseDatos);
+$baseDatos = "cetis107";
+$conexion = new mysqli($server, $user, $password,$baseDatos);
 
 //revisar conexion
 if($conexion->connect_error){
