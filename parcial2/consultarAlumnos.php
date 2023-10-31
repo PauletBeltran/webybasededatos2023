@@ -46,8 +46,8 @@
                   <td><?php echo $registro ["turno"]; ?></td>
                   <td><?php echo $registro ["sexo"]; ?></td>
                   <td>
-                    <a href="" class="btn btn-sm btn-primary">Editar</a>
-                    <a href="" class="btn btn-sm btn-danger">Eliminar</a>
+                    <a href="editarAlumno.php?id=<?php echo $registro["id"]; ?>" class="btn btn-sm btn-primary">Editar</a>
+                    <a href="eliminarAlumno.php?id=<?php echo $registro["id"]; ?>" class="btn btn-sm btn-danger">Eliminar</a>
                   </td>
                 </tr>
                 <?php } ?>
@@ -56,7 +56,7 @@
              
 
           <?php } else { ?>
-          <h2>No existen datos del alumno en la base de dtaos</h2>
+          <h2>No existen datos del alumno en la base de datos</h2>
           <?php } ?>
         </div>
       </div>
