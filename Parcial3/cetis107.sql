@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-11-2023 a las 03:24:28
+-- Tiempo de generación: 08-11-2023 a las 03:18:44
 -- Versión del servidor: 10.1.39-MariaDB
 -- Versión de PHP: 7.3.5
 
@@ -63,7 +63,11 @@ CREATE TABLE `materias` (
 --
 
 INSERT INTO `materias` (`id`, `nombre`, `semestre`, `especialidad`) VALUES
-(1, 'INGLES', 5, 'PROGRAMACION');
+(1, 'INGLES', 5, 'PROGRAMACION'),
+(2, 'FISICA', 5, 'PROGRAMACION'),
+(3, 'CONTA', 5, 'CONTABILIDAD'),
+(4, 'BIOLOGIA', 4, 'OFIMATICA'),
+(5, 'BIOLOGIA', 4, 'PROGRAMACION');
 
 --
 -- Índices para tablas volcadas
@@ -95,7 +99,7 @@ ALTER TABLE `alumnos`
 -- AUTO_INCREMENT de la tabla `materias`
 --
 ALTER TABLE `materias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

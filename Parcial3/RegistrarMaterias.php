@@ -13,6 +13,7 @@
     <div class="container"><br>
         <div class="row">
             <div class="col-12 card p-4">
+                <form action="GuardarMateria.php" method="POST">
                 <h1>Registrar Materia</h1><hr><br>
                 <form action="">
                     <div class="form-group">
@@ -33,6 +34,10 @@
                             <option value="ELECTRONICA">ELECTRONICA</option>
                         </select>
                     </div><br>
+                    <div>
+                        <input type="submit" class="btn btn-primary" value="Registrar">
+                        <a href="ConsultarMaterias.php" class="btn btn-danger">Cancelar</a>
+                    </div>
                 </div>
             </div>
          </div>
