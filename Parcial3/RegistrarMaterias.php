@@ -15,7 +15,6 @@
             <div class="col-12 card p-4">
                 <form action="GuardarMateria.php" method="POST">
                 <h1>Registrar Materia</h1><hr><br>
-                <form action="">
                     <div class="form-group">
                         <label for="nombre">Nombre:</label>
                         <input type="text" calss="form-control" name="nombre" placeholder="Teclea la materia">
