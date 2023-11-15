@@ -23,7 +23,7 @@
         <div class="row">
             <div class="col-12 card p-4">
             <center><h2>Asignar Materias al alumno</h2></center><br>
-                <form action="">
+                <form action="GuardarAsignacion.php" method="POST">
                     <label for="">Alumno:</label>
                     <select name="alumno" id="form-control" >
                         <option value="">Selecciona un alumno:</option>
