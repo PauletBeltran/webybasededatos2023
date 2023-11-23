@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultar Alumnos</title>
+    <title>Consultar Alumnos Materias</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <script src="code.jquery.com_jquery-3.7.1.js"></script>
 </head>
@@ -23,7 +23,8 @@
             <?php if($datos->num_rows > 0) { ?>
                 <?php while($registro = $datos->fetch_assoc()){
                     $id = $registro["id"];
-                    $sql2 = "SELECT a.*, m.nombre AS materia_nombre FROM alumno a INNER JOIN alumno_materias am ON a.id = am alumnos_id INNER JOIN materias m ON a.id = am.materia_id";
+                    $sql2 = "SELECT a.*, m.nombre AS materia_nombre FROM alumnos a INNER JOIN alumno_materias am 
+                    ON a.id = am.alumnos_id INNER JOIN materias m ON m.id = am.materia_id WHERE a.id =" .$id;
                     $datos2 = $conexion->query($sql2);
                     ?>
                     <div class="class">
@@ -35,8 +36,8 @@
                                 <p class="class-text">
                                     <ul>
                                         <?php while($materia = $datos2->fetch_assoc()) { ?>
-                                            <ul><?php echo $materia["materia_nombre"]; ?></ul>
-                                            <?php } ?>
+                                            <li><?php echo $materia["materia_nombre"]; ?></li>
+                                        <?php } ?>
                                     </ul>
                                 </p>                          
                         </div>

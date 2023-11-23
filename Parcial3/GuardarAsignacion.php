@@ -7,11 +7,11 @@ $materias = $_POST["materias"];
 if(count($materias) > 0){
     $sql = "";
     for ($i=0; $i < count($materias); $i++) {
-        $sql .= "INSERT INTO alumno_materias(alumno_id, materias_id) VALUES (".$alumno_id.", ".$materias[$i].");";
+        $sql .= "INSERT INTO alumno_materias(alumnos_id, materia_id) VALUES (".$alumno_id.", ".$materias[$i].");";
     }
     
     if($conexion->query($sql) === TRUE){
-        header("Location: inicio.php");
+        header("Location: ConsultarAlumnosMaterias.php");
         $conexion->close();
         exit;
     } else {
