@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-11-2023 a las 03:30:21
+-- Tiempo de generación: 23-11-2023 a las 03:13:20
 -- Versión del servidor: 10.1.39-MariaDB
 -- Versión de PHP: 7.3.5
 
@@ -62,6 +62,14 @@ CREATE TABLE `alumno_materias` (
   `materia_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Volcado de datos para la tabla `alumno_materias`
+--
+
+INSERT INTO `alumno_materias` (`id`, `alumnos_id`, `materia_id`) VALUES
+(1, 2, 1),
+(2, 4, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -95,6 +103,12 @@ ALTER TABLE `alumnos`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `alumno_materias`
+--
+ALTER TABLE `alumno_materias`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `materias`
 --
 ALTER TABLE `materias`
@@ -109,6 +123,12 @@ ALTER TABLE `materias`
 --
 ALTER TABLE `alumnos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT de la tabla `alumno_materias`
+--
+ALTER TABLE `alumno_materias`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `materias`
